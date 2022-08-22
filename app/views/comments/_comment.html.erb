@@ -1,0 +1,11 @@
+<div class="box">
+  <article class="media">
+    <div class="media-content">
+      <p>
+        <strong><%= comment.name%>: </strong>
+        <%= comment.comment%>
+      </p>
+    </div>
+    <%= button_to 'Delete', [comment.post, comment], class:"button is-danger", method: :delete, :onclick => "return confirm('Are you sure?')" %>
+  </article>
+</div>

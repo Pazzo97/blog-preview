@@ -26,7 +26,18 @@
   </div>
 </div>
 </section>
-<section class="comments">
+<section class="section comments">
+  <div class="container">
+    <h3 class="subtitle is-5"> <strong> <%= @post.comments.count %> Comments</strong> </h3>
+    <%= render @post.comments %>
+    <div class="comment-form">
+    </hr>
+    <h3 class="subtitle is-3">
+      <strong>Leave a comment</strong>
+      <%= render 'comments/form' %>
+    </h3>
+  </div>
+</div>
 </section>
 <div class="container">
   <div class="field">
