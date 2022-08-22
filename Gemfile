@@ -33,6 +33,8 @@ gem "jbuilder"
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
+gem 'htmlbeautifier'
+
 # Bulma CSS
 gem 'bulma-rails', '~> 0.9.3'
 

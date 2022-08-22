@@ -5,12 +5,39 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
+    <section class="hero is-primary is-medium">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <%= link_to 'My Blog', root_path, class: "navbar-item" %>
+              <span class="navbar-burger burger" data-targert="navbarMenuHeroA">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroA" class="navbar-menu">
+              <div class="navbar-end">
+                <%= link_to "Create a new Post", new_post_path, class:"navbar-itemj" %>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">
+            <%= yield :page_title%>
+          </h1>
+        </div>
+      </div>
+    </section>
     <%= yield %>
   </body>
 </html>
